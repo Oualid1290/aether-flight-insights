@@ -12,6 +12,10 @@ import Fleet from "./pages/Fleet";
 import Reports from "./pages/Reports";
 import Maintenance from "./pages/Maintenance";
 import Settings from "./pages/Settings";
+import RiskAssessment from "./pages/RiskAssessment";
+import Analytics from "./pages/Analytics";
+import Telemetry from "./pages/Telemetry";
+import FlightMaps from "./pages/FlightMaps";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,8 +33,12 @@ const App = () => (
             <Route path="/upload" element={<UploadPage />} />
             <Route path="/flights/:id" element={<FlightDetail />} />
             <Route path="/fleet" element={<Fleet />} />
+            <Route path="/telemetry" element={<Telemetry />} />
+            <Route path="/maps" element={<FlightMaps />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/maintenance" element={<Maintenance />} />
+            <Route path="/risk" element={<RiskAssessment />} />
+            <Route path="/analytics" element={<Analytics />} />
             <Route path="/settings" element={<Settings />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
